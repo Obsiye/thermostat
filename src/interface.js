@@ -34,24 +34,33 @@ $(document).ready(function() {
     $('#temperature').attr('class', thermostat.energyUsage());
   };
 
-
-  $.ajax({
-    url: "http://api.openweathermap.org/data/2.5/weather",
-    type: "GET",
-    dataType: "JSON",
-    data: {
-      id: "2643743",
-      units: "metric",
-      APPID: "81e2f5088f4d06b3466d354016c026a9"
-    },
-    success: function (data) {
-      alert(data.main.temp);
-    },
-    error: function (data, textStatus, errorThrown) {
-      //Do Something to handle error
-      alert(textStatus);
-    }
+  $('select').change( function() {
+    getWeather( $('select').val() );
   });
+
+  function getWeather(cityid) {
+    $.ajax({
+      url: "http://api.openweathermap.org/data/2.5/weather",
+      type: "GET",
+      dataType: "JSON",
+      data: {
+        id: cityid,
+        units: "metric",
+        APPID: "e5766314e7f43bd8e340de6c8459e0ab"
+      },
+      success: function (data) {
+        updateCityTemperature(data);
+      },
+      error: function (data, textStatus, errorThrown) {
+        //Do Something to handle error
+        alert(textStatus);
+      }
+    });
+  };
+
+  function updateCityTemperature(data) {
+    $('#current-temperature').text(data.main.temp)
+  }
 
   // london id 2643743
 
@@ -59,5 +68,5 @@ $(document).ready(function() {
 
   // Api key 81e2f5088f4d06b3466d354016c026a9
 
-  
+
 });
