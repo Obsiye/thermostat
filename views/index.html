@@ -8,23 +8,36 @@
   <link rel="stylesheet" type="text/css" href="../css/index.css">
 </head>
 <body>
-  Select the city:
-  <select>
-    <option value="2643743">London</option>
-    <option value="3369157">Cape Town</option>
-    <option value="6167865">Toronto</option>
-  </select>
 
-<p>Current temperature in the city: <span id="current-temperature">temp</span></p><br>
 
-<h1 id="temperature">Temperature</h1>
-<button type="button" id="increase">+</button>
-<button type="button" id="decrease">-</button>
-<button type="button" id="reset">Reset</button>
-<br>
-Power saving mode is <span id="power-saving-status">on</span>
-<h2>Switch Power Saving Mode</h2>
-<button type="button" id="psm-on">On</button>
-<button type="button" id="psm-off">Off</button>
+<div class="container">
+
+	<div id='page_divide_1'>
+			<h1>Select the city:</h1>
+			<select>
+				<option value="2643743">London</option>
+				<option value="3369157">Cape Town</option>
+				<option value="6167865">Toronto</option>
+			</select>
+
+		<h1>Current temperature in the city: <span id="current-temperature">temp</span></h1>
+
+		<h1 id="temperature">Temperature</h1>
+		<button type="button" id="increase">+</button>
+		<button type="button" id="decrease">-</button>
+		<button type="button" id="reset">Reset</button>
+		<br>
+		<h1>Power saving mode is <span id="power-saving-status">on</span></h1>
+		<h2>Switch Power Saving Mode</h2>
+		<button type="button" id="psm-on">On</button>
+		<button type="button" id="psm-off">Off</button>
+	</div>
+	<div id='page_divide_2'>
+		<h1 id='degrees'>Degrees</h1>
+	</div>
+
+</div>
+
+
 </body>
 </html>

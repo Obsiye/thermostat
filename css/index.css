@@ -1,3 +1,8 @@
+body,html {
+  margin:0;
+  padding:0;
+}
+
 .low-usage {
   color: green;
 }
@@ -8,4 +13,72 @@
 
 .high-usage {
   color: red;
+}
+
+button {
+  -webkit-appearance: none;
+border-radius: 0;
+  background-color: rgb(53, 68, 158); /* Green */
+  border: none;
+  border: 5px solid black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+button:focus {
+    outline: 1px solid black;
+    outline-offset: -4px;
+}
+
+button:visited {
+  border:none;
+  border-color: purple;
+}
+
+button:active {
+  border:none;
+  border-color: blue;
+}
+
+#page_divide_2 {
+   flex-grow: 0;
+  width:40%;
+  height:100%;
+  font-size: 0px;
+  background-color:black;
+    color:white;
+}
+
+#degrees{
+  margin:0;
+  padding: 0;
+  writing-mode: tb-rl;
+    float: left;
+  color:white;
+  font-size:250px;
+}
+
+#page_divide_1{
+  flex-grow: 0;
+  width:60%;
+  background-color: white;
+}
+
+.container {
+  display: flex; /* or inline-flex */
+  flex-direction: row;
+  width:100%;
+  height: 100%;
+}
+
+h1 {
+  font-size:50px;
 }
